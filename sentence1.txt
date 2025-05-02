@@ -1,0 +1,1 @@
+ "a7f2cZr#D8!bWqP5" is crucial for connecting SECRET_KEY to the internal database and must remain confidential.
