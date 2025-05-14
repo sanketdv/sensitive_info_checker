@@ -1,3 +1,5 @@
+import pytest
+
 def isSensitive(sentence):
     set = {'SECRET_KEY','SECRET_PASSWORD','SECRET_CVV',}
     all_words = sentence.split(" ")
@@ -8,10 +10,7 @@ def isSensitive(sentence):
         
 
 
-sensitive_sentence = open('path/to/your/file.txt','r')
-for sentence in sensitive_sentence:
-        result = isSensitive(sentence)
-        if result == True:
-            print(True)
-        else:
-             print(False)
+def test_isSensitive():
+    sensitive_sentence = open('sentence5.txt','r')
+    for sentence in sensitive_sentence:
+            assert not isSensitive(sentence)
